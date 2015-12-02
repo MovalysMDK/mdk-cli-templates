@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>LogLevel</key>
+	<string>debug</string>
+	<key>PushMailOnCrash</key>
+	<string>no</string>
+	<key>AdminEMails</key>
+	<array>
+		<string>sebastien.maitre@sopragroup.com</string>
+	</array>
+	<key>StarterFwk</key>
+	<array>
+		<string>MFCoreDataRunInit</string>
+		<string>MFFwkCsvLoaderRunInit</string>
+		<string>MFProjectCsvLoaderRunInit</string>
+		<string>MFUserCsvLoaderRunInit</string>
+		<string>MFLoadVisualConfigurationRunInit</string>
+		<string>MFLoadFormRunInit</string>
+	</array>
+	<key>DatabaseName</key>
+	<string>AppDatabase.sqlite</string>
+	<key>MovalysModelName</key>
+	<string>Model</string>
+	<key>MFWaitRunInit_wait</key>
+	<integer>1</integer>
+	<key>MandatoryIndicator</key>
+	<string>*</string>
+	<key>ConfigurationRepositories</key>
+	<array>
+		<string>bundle://main/configuration</string>
+	</array>
+	<key>FormOnUnsavedChanges</key>
+	<string>SaveChangesAlert</string>
+	<key>RestConnectionConfiguration</key>
+	<dict>
+		<key>currentConfiguration</key>
+		<string>default</string>
+		<key>host</key>
+		<dict/>
+		<key>port</key>
+		<dict/>
+		<key>path</key>
+		<dict/>
+		<key>wsEntryPoint</key>
+		<dict/>
+		<key>user</key>
+		<dict/>
+		<key>password</key>
+		<dict/>
+		<key>proxyHost</key>
+		<dict/>
+		<key>proxyPort</key>
+		<dict/>
+		<key>proxyUser</key>
+		<dict/>
+		<key>proxyPassword</key>
+		<dict/>
+	</dict>
+</dict>
+</plist>
