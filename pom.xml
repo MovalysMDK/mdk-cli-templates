@@ -19,12 +19,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.sopragroup.adeuza.movalysfwk</groupId>
-	<artifactId>mdk-project-template</artifactId>
+	<groupId>com.sopragroup.adeuza.movalysfwk.templates.basic</groupId>
+	<artifactId>mdk-basic-template</artifactId>
 	<version>6.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	<name>mdk-project-template</name>
+	<name>MDK Basic Template</name>
 
 	<organization>
 	    <name>Sopra Steria Group</name>
@@ -45,9 +45,9 @@
 	</properties>
 
 	<scm>
-		<connection>scm:svn:http://svn.ntes.fr.sopra/svnpolemobility/svn/Movalys/repository/com/adeuza/movalysfwk/mdk-project-template/branches/Dunagiri/</connection>
-		<developerConnection>scm:svn:http://svn.ntes.fr.sopra/svnpolemobility/svn/Movalys/repository/com/adeuza/movalysfwk/mdk-project-template/branches/Dunagiri/</developerConnection>
-		<url>http://svn.ntes.fr.sopra/svnpolemobility/svn/Movalys/repository/</url>
+		<connection>scm:git:git://gitmovalys@git.ptx.fr.sopra:mdk-cli-templates#basic</connection>
+		<developerConnection>scm:git:git://gitmovalys@git.ptx.fr.sopra:mdk-cli-templates#basic</developerConnection>
+		<url>scm:git:git://gitmovalys@git.ptx.fr.sopra</url>
 	</scm>
 	
 	<distributionManagement>
