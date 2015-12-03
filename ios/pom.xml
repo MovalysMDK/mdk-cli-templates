@@ -69,19 +69,7 @@
                                                 		</filtermapper>
         											</chainedmapper>
         										</mapper>
-                                        </copy>                                         
-                                         <copy todir="${project.build.outputDirectory}/archetype-resources/__productId__.xcodeproj" verbose="true" overwrite="true">
-                                                <fileset dir="${basedir}/MFTemplate.xcodeproj">
-                                                        <include name="**/*" />
-                                                </fileset>
-    											<mapper>
-        											<chainedmapper>
-        												<filtermapper>
-                                                        	<replacestring from="MFTemplate" to="__productId__" />
-                                                		</filtermapper>
-        											</chainedmapper>
-        										</mapper>
-                                        </copy>                                         
+                                        </copy>                                        
                                          <copy todir="${project.build.outputDirectory}/archetype-resources/__productId__/resources/strings/" verbose="true" overwrite="true">
                                                 <fileset dir="${basedir}/MFTemplate/resources/strings/">
                                                         <include name="**/*" />
