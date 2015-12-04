@@ -44,7 +44,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.sopragroup.adeuza.movalysfwk.templates.my_expenses_demo</groupId>
-			<artifactId>mdk-android-project-template</artifactId>
+			<artifactId>mdk-android-basic-template</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
