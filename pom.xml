@@ -45,9 +45,10 @@
 	</properties>
 
 	<scm>
-		<connection>scm:git:git://gitmovalys@git.ptx.fr.sopra:mdk-cli-templates#basic</connection>
-		<developerConnection>scm:git:git://gitmovalys@git.ptx.fr.sopra:mdk-cli-templates#basic</developerConnection>
+		<connection>scm:git:git://gitmovalys@git.ptx.fr.sopra:mdk-cli-templates.git</connection>
+		<developerConnection>scm:git:git://gitmovalys@git.ptx.fr.sopra:mdk-cli-templates.git</developerConnection>
 		<url>scm:git:git://gitmovalys@git.ptx.fr.sopra</url>
+		<branchName>basic</branchName>
 	</scm>
 	
 	<distributionManagement>
