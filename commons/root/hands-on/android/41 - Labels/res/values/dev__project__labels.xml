@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string name="aboutpanel__url__label">Url</string>
+    <string name="AboutScreen">About</string>
+    <string name="application_actionmenu_myexpensesscreen">Save report</string>
+    <string name="application_actionmenu_myexpensesscreen_button_create_reportdetailpanel">Create report</string>
+    <string name="button_create_reportdetailpanel">Create report</string>
+    <string name="button_navigate_AboutScreen">About</string>
+    <string name="button_navigate_MyExpensesScreen">My Expenses</string>
+    <string name="button_navigate_MyTravelBookScreen">My Travel Book</string>
+    <string name="enum_ExpenseCategory_CAR">Car</string>
+    <string name="enum_ExpenseCategory_HOTEL">Hotel</string>
+    <string name="enum_ExpenseCategory_MEAL">Meal</string>
+    <string name="enum_ExpenseCategory_OTHER">Other</string>
+    <string name="enum_ExpenseCategory_TRAIN">Train</string>
+    <string name="enum_ExpenseState_AMOUNTNONE">NONE</string>
+    <string name="enum_ExpenseState_AMOUNTOK">OK</string>
+    <string name="enum_ExpenseState_AMOUNTOVERMAX">AMOUNTOVERMAX</string>
+    <string name="enum_ReportState_ACCEPTED">ACCEPTED</string>
+    <string name="enum_ReportState_PENDING">PENDING</string>
+    <string name="enum_ReportState_REFUSED">REFUSED</string>
+    <string name="HomeScreen">Menu</string>
+    <string name="MyExpensesScreen">My expenses</string>
+    <string name="MyTravelBookScreen">My travel book</string>
+    <string name="reportdetailpanel__lstVMReportDetailPanelExpenses__label">Expenses</string>
+    <string name="reportdetailpanel__VMReportDetailPanelCustomer__label">Customer</string>
+    <string name="selreportdetailpanel__VMReportDetailPanelType__label">Type</string>
+</resources>
