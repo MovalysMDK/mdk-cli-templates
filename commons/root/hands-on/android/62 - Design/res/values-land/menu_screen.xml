@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="MenuButton.paddingBottom">0dp</dimen>
+    <dimen name="MenuButton.paddingLeft">150dp</dimen>
+
+    <style name="MenuButton.About" parent="@style/MenuButton">
+        <item name="android:background">@drawable/menu_button_about</item>
+        <item name="android:drawableLeft">@drawable/menu_button_about_icon</item>
+    </style>
+
+    <style name="MenuButton.MyExpenses" parent="@style/MenuButton">
+        <item name="android:background">@drawable/menu_button_myexpenses</item>
+        <item name="android:drawableLeft">@drawable/menu_button_myexpenses_icon</item>
+    </style>
+
+    <style name="MenuButton.MyTravelBook" parent="@style/MenuButton">
+        <item name="android:background">@drawable/menu_button_mytravelbook</item>
+        <item name="android:drawableLeft">@drawable/menu_button_mytravelbook_icon</item>
+    </style>
+</resources>
