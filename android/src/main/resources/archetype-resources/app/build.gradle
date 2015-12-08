@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-apply plugin: 'mdkdbkeystore'
+apply plugin: 'dbkeystore'
 apply plugin: 'mdkdrawablecheck'
 apply plugin: 'mdkkeytool'
 apply plugin: 'com.github.dcendents.android-maven'
