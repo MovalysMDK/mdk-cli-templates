@@ -77,7 +77,7 @@ allprojects {
 
         // library versions
         appcompatv7Version = "23.1.0"
-        mdkAndroidVersion = '6.0.0'
+        mdkAndroidVersion = '6.0.1-SNAPSHOT'
         mdkWidgetVersion = 1.0.0'
         mdkEspressoVersion = 1.0.0'
 
