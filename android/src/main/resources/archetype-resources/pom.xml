@@ -12,7 +12,7 @@
 	<groupId>${groupId}</groupId>
 	<artifactId>${artifactId}</artifactId>
 	<name>${artifactId}</name>
-	<version>6.0.0</version>
+	<version>${version}</version>
 	<packaging>pom</packaging>
 	
 	<!--TODO
@@ -51,18 +51,18 @@
 					<plugin>
 						<groupId>com.adeuza</groupId>
 						<artifactId>adjava-maven-plugin</artifactId>
-						<version>6.0.0</version>
+						<version>${adjava.version}</version>
 						<inherited>false</inherited>
 						<dependencies>
 							<dependency>
 								<groupId>com.adeuza</groupId>
 								<artifactId>adjava-android</artifactId>
-								<version>6.0.0</version>
+								<version>${adjava.version}</version>
 							</dependency>
 							<dependency>
 								<groupId>com.adeuza.movalysfwk.mf4mdd</groupId>
 								<artifactId>mf4mdd-android</artifactId>
-								<version>6.0.0</version>
+								<version>${mf4mdd.version}</version>
 							</dependency>
 						</dependencies>
 						<executions>
