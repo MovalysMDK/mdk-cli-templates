@@ -6,9 +6,9 @@
 	use_frameworks!
 	inhibit_all_warnings!
 
-	pod 'MFCore', '2.0.0'
-	pod 'MFUI', '2.0.0'
-	pod 'MDKControl', '1.0.0'
+	pod 'MFCore', '2.0.1'
+	pod 'MFUI', '2.0.1'
+	pod 'MDKControl', '1.0.1'
 
 	post_install do |installer_representation|
 	    installer_representation.pods_project.targets.each do |target|
@@ -16,7 +16,7 @@
 	            config.build_settings['ENABLE_STRICT_OBJC_MSGSEND'] = 'NO'
 	            config.build_settings['CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES'] = 'YES'
 	            if target.name == "Pods-MFUI"
-	                config.build_settings['LD_RUNPATH_SEARCH_PATHS'] = ''            end
+	                config.build_settings['LD_RUNPATH_SEARCH_PATHS'] = '$(CONFIGURATION_BUILD_DIR)'            end
 	        end
 	    end
 	end
