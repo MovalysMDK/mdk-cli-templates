@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<android.support.v7.widget.CardView
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    card_view:cardUseCompatPadding="true"
+    style="?attr/mdkCardViewStyle"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto" xmlns:movalys="http://www.adeuza.com/movalys/mm/android">
+    <RelativeLayout
+        android:id="@+id/greportdetailpanel__screendetail__master"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:padding="8dp" xmlns:mdk="http://schemas.android.com/apk/res-auto">
+
+        <com.soprasteria.movalysmdk.widget.spinner.MDKRichSpinner
+            android:id="@+id/reportdetailpanel__VMReportDetailPanelCustomer__edit"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            mdk:has_blank_row="true"
+            mdk:hint="@string/reportdetailpanel__VMReportDetailPanelCustomer__label"
+            mdk:label="@string/reportdetailpanel__VMReportDetailPanelCustomer__label" mdk:mandatory="true"/>
+
+        <com.soprasteria.movalysmdk.widget.basic.MDKRichDate
+            android:id="@+id/reportdetailpanel__date__edit"
+            android:layout_below="@id/reportdetailpanel__VMReportDetailPanelCustomer__edit"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" mdk:mandatory="true"/>
+
+        <com.soprasteria.movalysmdk.widget.basic.MDKRichEditText
+            android:id="@+id/reportdetailpanel__reason__edit"
+            android:layout_below="@id/reportdetailpanel__date__edit"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:maxLength="255" mdk:mandatory="false"/>
+
+        <com.soprasteria.movalysmdk.widget.basic.MDKRichEditText
+            android:id="@+id/reportdetailpanel__humanReadableAmount__value"
+            android:inputType="numberDecimal"
+            android:layout_below="@id/reportdetailpanel__reason__edit"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:maxLength="14"
+            mdk:mandatory="true" mdk:readonly="true"/>
+
+        <com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMFixedList
+            android:id="@+id/reportdetailpanel__lstVMReportDetailPanelExpenses__edit"
+            android:layout_below="@id/reportdetailpanel__humanReadableAmount__value"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent" mdk:label="@string/reportdetailpanel__lstVMReportDetailPanelExpenses__label"/>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

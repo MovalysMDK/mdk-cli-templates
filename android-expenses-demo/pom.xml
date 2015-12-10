@@ -82,6 +82,10 @@
 									<replacetoken><![CDATA[<artifactId>mf4mdd-android</artifactId>]]></replacetoken>
 									<replacevalue><![CDATA[<artifactId>mf4mdd-android-design</artifactId>]]></replacevalue>
 								</replace>
+								<replace file="${project.build.directory}/classes/archetype-resources/pom.xml">
+									<replacetoken><![CDATA[<appendGeneratorForceOverwrite>true</appendGeneratorForceOverwrite>]]></replacetoken>
+									<replacevalue><![CDATA[<appendGeneratorForceOverwrite>false</appendGeneratorForceOverwrite>]]></replacevalue>
+								</replace>
 <!-- 								<replace -->
 <!-- 									file="${project.build.directory}/classes/archetype-resources/mbandroid/pom.xml"> -->
 <!-- 									<replacetoken><![CDATA[<artifactId>mdk</artifactId>]]></replacetoken> -->

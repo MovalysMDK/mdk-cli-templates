@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string name="AboutScreen">À Propos</string>
+    <string name="application_actionmenu_myexpensesscreen">Sauvegarde la note</string>
+    <string name="application_actionmenu_myexpensesscreen_button_create_reportdetailpanel">Créer une note</string>
+    <string name="button_create_reportdetailpanel">Créer une note</string>
+    <string name="button_navigate_AboutScreen">À Propos</string>
+    <string name="button_navigate_MyExpensesScreen">Mes notes de frais</string>
+    <string name="button_navigate_MyTravelBookScreen">Mon carnet de voyage</string>
+    <string name="enum_ExpenseCategory_CAR">Voiture</string>
+    <string name="enum_ExpenseCategory_HOTEL">Hôtel</string>
+    <string name="enum_ExpenseCategory_MEAL">Repas</string>
+    <string name="enum_ExpenseCategory_OTHER">Divers</string>
+    <string name="enum_ExpenseCategory_TRAIN">Train</string>
+    <string name="enum_ExpenseState_AMOUNTNONE">NONE</string>
+    <string name="enum_ExpenseState_AMOUNTOK">OK</string>
+    <string name="enum_ExpenseState_AMOUNTOVERMAX">Max dépassé</string>
+    <string name="enum_ReportState_ACCEPTED">Acceptée</string>
+    <string name="enum_ReportState_PENDING">En cours de validation</string>
+    <string name="enum_ReportState_REFUSED">Refusée</string>
+    <string name="HomeScreen">Menu</string>
+    <string name="MyExpensesScreen">Mes notes de frais</string>
+    <string name="MyTravelBookScreen">Mon carnet de voyage</string>
+    <string name="reportdetailpanel__lstVMReportDetailPanelExpenses__label">Dépenses</string>
+    <string name="reportdetailpanel__VMReportDetailPanelCustomer__label">Client</string>
+    <string name="selreportdetailpanel__VMReportDetailPanelType__label">Type</string>
+
+    <string name="delete_report_confirm">Confirmation de la suppression de la note</string>
+</resources>

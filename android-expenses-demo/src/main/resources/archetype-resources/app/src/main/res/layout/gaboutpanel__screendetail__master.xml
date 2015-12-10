@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<android.support.v7.widget.CardView
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    card_view:cardUseCompatPadding="true"
+    style="?attr/mdkCardViewStyle"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto" xmlns:movalys="http://www.adeuza.com/movalys/mm/android">
+    <RelativeLayout
+        android:id="@+id/gaboutpanel__screendetail__master"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:padding="8dp" xmlns:mdk="http://schemas.android.com/apk/res-auto">
+        <ScrollView
+            android:id="@+id/gaboutpanel__screendetailscroll__visualpanel"
+            android:layout_height="match_parent" android:layout_width="match_parent">
+            <RelativeLayout
+                android:id="@+id/gaboutpanel__screendetail__visualpanel"
+                android:layout_height="match_parent" android:layout_width="match_parent">
+
+                <com.adeuza.movalysfwk.mobile.mf4android.ui.views.MMWebView
+                    android:id="@+id/aboutpanel__url__value"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    movalys:url="file:///android_asset/about.html"
+                    movalys:mandatory="true"/>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
