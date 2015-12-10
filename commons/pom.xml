@@ -21,7 +21,7 @@
 	<parent>
 		<groupId>com.sopragroup.adeuza.movalysfwk.templates.my_expenses_demo</groupId>
 		<artifactId>mdk-my_expenses_demo-template</artifactId>
-		<version>6.0.0-SNAPSHOT</version>
+		<version>6.0.0-BETA5</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>	
 	
