@@ -12,7 +12,7 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
     GNU Lesser General Public License for more details.
     You should have received a copy of the GNU Lesser General Public License
-    along with Movalys MDK. If not, see <http://www.gnu.org/licenses />.
+    along with Movalys MDK. If not, see <http://www.gnu.org/licenses/>.
 
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -25,7 +25,7 @@
 		<relativePath>../pom.xml</relativePath>
 	</parent>	
 	
-	<artifactId>mdk-project</artifactId>
+	<artifactId>mdk-my_expenses_demo-project</artifactId>
 	<packaging>pom</packaging>
 	
 	<organization>
@@ -53,7 +53,7 @@
 				<artifactId>maven-assembly-plugin</artifactId>
 				<configuration>
 					<descriptor>src/assembly/mdkproject.xml</descriptor>
-					<finalName>mdk-project-${pom.version}</finalName>
+					<finalName>${project.artifactId}-${pom.version}</finalName>
 				</configuration>
 				<executions>
 					<execution>
