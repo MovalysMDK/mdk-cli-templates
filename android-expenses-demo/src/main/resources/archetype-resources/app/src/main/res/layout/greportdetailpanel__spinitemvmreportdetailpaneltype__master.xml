@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout
+    android:id="@+id/greportdetailpanel__spinitemvmreportdetailpaneltype__master"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:mdk="http://schemas.android.com/apk/res-auto" xmlns:movalys="http://www.adeuza.com/movalys/mm/android">
+
+    <com.soprasteria.movalysmdk.widget.basic.MDKRichEditText
+        android:id="@+id/lstreportdetailpanel__description__value"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:maxLength="255"
+        mdk:mandatory="true"
+        mdk:readonly="true" style="?attr/simpleSpinner_dropDown"/>
+
+    <com.soprasteria.movalysmdk.widget.basic.MDKRichEnumView
+        android:id="@+id/lstreportdetailpanel__category__value"
+        android:layout_below="@id/lstreportdetailpanel__description__value"
+        android:layout_height="64dp"
+        android:layout_width="64dp"
+        mdk:readonly="true" style="?attr/simpleSpinner_dropDown"/>
+
+    <com.soprasteria.movalysmdk.widget.basic.MDKRichEditText
+        android:id="@+id/lstreportdetailpanel__humanReadableAmount__value"
+        android:inputType="numberDecimal"
+        android:layout_below="@id/lstreportdetailpanel__category__value"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:maxLength="14"
+        mdk:mandatory="false"
+        mdk:readonly="true" style="?attr/simpleSpinner_dropDown"/>
+</RelativeLayout>

@@ -1,0 +1,193 @@
+apply plugin: 'com.android.application'
+apply plugin: 'dbkeystore'
+apply plugin: 'mdkdrawablecheck'
+apply plugin: 'mdkkeytool'
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'spoon'
+
+group = "${groupId}"
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        applicationId "${groupId}"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 100
+        versionName "1.0"
+        
+        //testInstrumentationRunner "com.soprasteria.movalysmdk.espresso.AndroidJacocoTestRunner"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("android.keystore")
+            storePassword "a2aandroidSC"
+            keyAlias "android"
+            keyPassword "a2aandroidSC"
+        }
+    }
+
+    buildTypes {
+        debug {
+            testCoverageEnabled true
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+    lintOptions {
+          abortOnError false
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENCE.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'LICENSE.txt'
+    }
+}
+
+dependencies {
+    compile "com.android.support:appcompat-v7:$appcompatv7Version"
+    compile "com.android.support:recyclerview-v7:$appcompatv7Version"
+    compile "com.android.support:design:$appcompatv7Version"
+    // dependencies for the presenter and media component
+    compile "com.android.support:palette-v7:$appcompatv7Version"
+   
+    compile group:mdkAndroidLibGroup, name:"mdk", version:mdkAndroidVersion, ext:"aar", changing:mdkAndroidChanging
+    compile group:mdkAndroidLibGroup, name:"mdk-widget-legacy", version:mdkAndroidVersion, ext:"aar", changing:mdkAndroidChanging
+    compile group:mdkAndroidLibGroup, name:"mdk-$databaseVariant", version:mdkAndroidVersion, ext:"aar", changing:mdkAndroidChanging
+    compile group:mdkAndroidLibGroup, name:"mdk-workspace", version:mdkAndroidVersion, ext:"aar", changing:mdkAndroidChanging
+    compile group:mdkAndroidLibGroup, name:"mdk-scanner", version:mdkAndroidVersion, ext:"aar", changing:mdkAndroidChanging
+    compile group:mdkAndroidLibGroup, name:"mdk-recyclerview", version:mdkAndroidVersion, ext:"aar", changing:mdkAndroidChanging
+    compile group:mdkAndroidLibGroup, name:"mdk-fixedlist", version:mdkAndroidVersion, ext:"aar", changing:mdkAndroidChanging
+
+	compile group:mdkWidgetGroup, name:"widget-core", version:mdkWidgetVersion, ext:"aar", changing:mdkWidgetChanging
+	compile group:mdkWidgetGroup, name:"widget-basic", version:mdkWidgetVersion, ext:"aar", changing:mdkWidgetChanging
+	compile group:mdkWidgetGroup, name:"widget-fixedlist", version:mdkWidgetVersion, ext:"aar", changing:mdkWidgetChanging
+	compile group:mdkWidgetGroup, name:"widget-position", version:mdkWidgetVersion, ext:"aar", changing:mdkWidgetChanging
+	compile group:mdkWidgetGroup, name:"widget-spinner", version:mdkWidgetVersion, ext:"aar", changing:mdkWidgetChanging
+
+	// dependencies for the media component
+	compile group:mdkWidgetGroup, name:"widget-media", version:mdkWidgetVersion, ext:"aar", changing:mdkWidgetChanging
+    compile "com.larswerkman:lobsterpicker:1.0.0"
+    compile "com.caverock:androidsvg:1.2.1"
+
+    compile "com.squareup.okhttp:okhttp:$okHttpVersion"
+    compile "com.google.code.gson:gson:$gsonVersion"
+
+    //to run test: ./gradlew connectedAndroidTest
+    androidTestCompile "com.android.support.test.espresso:espresso-core:2.2.1"
+    androidTestCompile "com.android.support:support-annotations:$appcompatv7Version"
+    androidTestCompile "com.android.support.test:runner:0.4"
+    androidTestCompile group:mdkAndroidLibGroup, name:"mdk-test", version:mdkAndroidVersion, ext:"aar", changing:mdkAndroidChanging
+    androidTestCompile group:"com.soprasteria.movalysmdk.espresso", name:"mdk-espresso", version:mdkEspressoVersion, ext:"aar", changing:mdkEspressoChanging
+    
+    androidTestCompile 'com.squareup.spoon:spoon-client:1.2.1'
+}
+
+mdkdbkeystore {
+    password "a2aandroidSC"
+    alias "dbcrypt"
+    outputFile file("${project.projectDir}/src/main/res/raw/dbkeystore")
+}
+
+mdkkeytool {
+    keystore file("${project.projectDir}/android.keystore")
+	dname "CN=steria.com"
+    keypass "a2aandroidSC"
+	storepass "a2aandroidSC"
+    alias "android"
+}
+
+mdkdrawablecheck {
+    inputDirectory file("${project.projectDir}/src/main/res")
+    outputDirectory file("${project.projectDir}/report")
+}
+
+task androidJavadocs(type: Javadoc) {
+    options {
+        linksOffline "http://d.android.com/reference", "${android.sdkDirectory}/docs/reference"
+    }
+    exclude '**/BuildConfig.java'
+    exclude '**/R.java'
+    source = android.sourceSets.main.java.sourceFiles
+    classpath += project.files(project.android.getBootClasspath().join(File.pathSeparator))
+}
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: mdkArtifactoryRepoReleases) {
+                authentication(userName: mdkArtifactoryUsername, password: mdkArtifactoryPassword)
+            }
+            snapshotRepository(url: mdkArtifactoryRepoSnapshots) {
+                authentication(userName: mdkArtifactoryUsername, password: mdkArtifactoryPassword)
+            }
+        }
+    }
+}
+
+task buildDist(type: Zip) {
+    into 'jars'
+    from { subprojects.configurations.runtime }
+    from { subprojects.jar }
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
+//to run spoon: ./gradlew spoon 
+spoon {
+    // for debug output
+    debug = true
+
+    // To run a single test class
+    //className = 'fully.qualified.TestCase'
+
+    // To run a single method in TestCase
+    //methodName = 'testMyApp'
+}
+
+android.applicationVariants.all { variant ->
+    def name = variant.buildType.name
+
+    task("jar${name.capitalize()}", type: Jar) {
+        dependsOn variant.javaCompile
+        from variant.javaCompile.destinationDir
+    }
+    project.artifacts.add("archives", tasks["jar${name.capitalize()}"]);
+
+    if (name.equals(com.android.builder.core.BuilderConstants.DEBUG)) {
+        return; // Skip debug builds.
+    }
+
+    task("javadoc${variant.name.capitalize()}", type: Javadoc) {
+        description "Generates Javadoc for $variant.name."
+        source = variant.javaCompile.source
+        ext.androidJar = files("${android.sdkDirectory}/platforms/android-${android.compileSdkVersion}/android.jar")
+        classpath = files(variant.javaCompile.classpath.files) + ext.androidJar
+        failOnError false
+        title project.archivesBaseName + " " + project.version
+        options.memberLevel = org.gradle.external.javadoc.JavadocMemberLevel.PRIVATE
+        options {
+            links "http://docs.oracle.com/javase/7/docs/api/"
+            linksOffline "http://d.android.com/reference/","${android.sdkDirectory}/docs/reference"
+        }
+        exclude '**/BuildConfig.java'
+        exclude '**/R.java'
+    }
+
+    task("bundleJavadoc${variant.name.capitalize()}", type: Jar) {
+        description "Bundles Javadoc into zip for $variant.name."
+        classifier = "javadoc"
+        from tasks["javadoc${variant.name.capitalize()}"]
+    }
+
+    // Add the Javadoc jar to the project's artifacts. This will allow us to upload it easily later
+    project.artifacts.add("archives", tasks["bundleJavadoc${variant.name.capitalize()}"]);
+}
