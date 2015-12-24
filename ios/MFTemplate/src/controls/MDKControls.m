@@ -30,3 +30,6 @@
 @implementation MDKWebView @end
 @implementation MDKPickerList @end
 @implementation MDKSwitch @end
+@implementation MDKNumberPicker @end
+@implementation MDKScanner @end
+@implementation MDKSignature @end
