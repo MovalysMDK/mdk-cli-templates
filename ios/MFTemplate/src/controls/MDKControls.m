@@ -25,3 +25,11 @@
 @implementation MDKFixedList @end
 @implementation MDKEnumImage @end
 @implementation MDKPosition @end
+@implementation MDKEnumList @end
+@implementation MDKMedia @end
+@implementation MDKWebView @end
+@implementation MDKPickerList @end
+@implementation MDKSwitch @end
+@implementation MDKNumberPicker @end
+@implementation MDKScanner @end
+@implementation MDKSignature @end
