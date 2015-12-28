@@ -1,0 +1,37 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "89224B83B1240D29F92ADC4783FF273182D388B4",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "89224B83B1240D29F92ADC4783FF273182D388B4" : 0,
+    "c2b672ac-07ee-0310-9223-be368f17bb99++9021" : 0,
+    "c2b672ac-07ee-0310-9223-be368f17bb99++874" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "38003891-8FF5-4049-BD48-EB18C0745AE2",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "89224B83B1240D29F92ADC4783FF273182D388B4" : "mdk-project-template\/",
+    "c2b672ac-07ee-0310-9223-be368f17bb99++9021" : "5.0",
+    "c2b672ac-07ee-0310-9223-be368f17bb99++874" : "Cotopaxi_4.0"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "MFTemplate",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ios\/MFTemplate.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "git.ptx.fr.sopra:mdk-project-template.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "89224B83B1240D29F92ADC4783FF273182D388B4"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/svn.ntes.fr.sopra\/svnpolemobility\/svn\/Movalys\/repository",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "c2b672ac-07ee-0310-9223-be368f17bb99++874"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/svn.ntes.fr.sopra\/svnpolemobility\/svn\/Movalys\/repository",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "c2b672ac-07ee-0310-9223-be368f17bb99++9021"
+    }
+  ]
+}
