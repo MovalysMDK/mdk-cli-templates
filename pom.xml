@@ -64,6 +64,7 @@
 	<modules>
 	    <module>commons</module>
 		<module>ios</module>
+		<module>html5</module>
 		<module>android</module>
 		<module>android-design</module>
 	</modules>
@@ -111,6 +112,7 @@
 					<includes>
 						<include>android/pom.xml</include>
 						<include>ios/pom.xml</include>
+						<include>html5/pom.xml</include>
 						<include>commons/pom.xml</include>
 						<include>commons/src/assembly/*.xml</include>
 					</includes>
