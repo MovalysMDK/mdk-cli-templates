@@ -65,8 +65,6 @@
 	    <module>commons</module>
 		<module>ios</module>
 		<module>android</module>
-		<module>android-design</module>
-		<module>android-expenses-demo</module>
 		<module>html5</module>
 	</modules>
 	
