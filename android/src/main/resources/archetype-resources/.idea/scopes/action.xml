@@ -1,3 +1,0 @@
-<component name="DependencyValidationManager">
-  <scope name="action" pattern="src[app]:${groupId}.action..*" />
-</component>

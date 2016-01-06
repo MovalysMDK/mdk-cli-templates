@@ -41,6 +41,14 @@
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.sopragroup.adeuza.movalysfwk</groupId>
+			<version>6.0.1-SNAPSHOT</version>
+			<artifactId>mdk-android-project-template</artifactId>
+		</dependency>
+	</dependencies>
 	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -48,30 +56,52 @@
 		<target>1.7</target>
 	</properties>
 	
+
 	<build>
+		<resources>
+			<resource>
+				<directory>${project.build.directory}/parent</directory>
+			</resource>
+			<resource>
+				<directory>src/main/resources</directory>
+			</resource>
+		</resources>
+
+	
 		<plugins>
 			<plugin>
-        		<artifactId>maven-antrun-plugin</artifactId>
-        		<executions>
-                	<execution>
-                        <id>Copy commons resources inside each platform</id>
-                        <phase>generate-sources</phase>
-                        <inherited>false</inherited>
-                        <configuration>
-                        	<tasks>
-                            	<copy file="../commons/root/commons/UML Movalys Framework Profile.mdzip" todir="${project.build.directory}/classes/archetype-resources/docs/modelisation/" verbose="true" overwrite="true">
-                                </copy>
-                            	<copy file="../commons/root/commons/MOV-MM-Referentiel_de_donnees-V1.0.xls" todir="${project.build.directory}/classes/archetype-resources/tools/" verbose="true" overwrite="true">
-                                </copy>                               
-                        	</tasks>
-                        </configuration>
-                        <goals>
-                                <goal>run</goal>
-                        </goals>
-                	</execution>
-        		</executions>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>2.10</version>
+				<executions>
+					<execution>
+						<id>unpack-dependencies</id>
+						<phase>process-resources</phase>
+						<goals>
+							<goal>unpack-dependencies</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.build.directory}/parent</outputDirectory>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+		        <artifactId>maven-resources-plugin</artifactId>
+		        <version>2.7</version>
+		        <executions>
+					<execution>
+						<id>proces-resources</id>
+						<phase>process-resources</phase>
+						<goals>
+							<goal>resources</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
+
 	</build>
 	
 </project>
