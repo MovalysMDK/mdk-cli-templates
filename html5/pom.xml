@@ -12,7 +12,7 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
     GNU Lesser General Public License for more details.
     You should have received a copy of the GNU Lesser General Public License
-    along with Movalys MDK. If not, see <http://www.gnu.org/licenses />.
+    along with Movalys MDK. If not, see <http://www.gnu.org/licenses/>.
 
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -25,7 +25,7 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-	<artifactId>mdk-html5-basic-template</artifactId>
+	<artifactId>mdk-html5-design-template</artifactId>
 	<packaging>jar</packaging>
 
 	<name>MDK HTML 5 Basic Template</name>
@@ -46,31 +46,70 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <compileSource>1.7</compileSource>
         <target>1.7</target>
+
+        <parentTemplate.groupId>com.sopragroup.adeuza.movalysfwk.templates.basic</parentTemplate.groupId>
+        <parentTemplate.artifactId>mdk-html5-basic-template</parentTemplate.artifactId>
+        <parentTemplate.version>6.0.0-SNAPSHOT</parentTemplate.version>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>${parentTemplate.groupId}</groupId>
+            <artifactId>${parentTemplate.artifactId}</artifactId>
+            <version>${parentTemplate.version}</version>
+        </dependency>
+    </dependencies>
     
 	<build>
-		<plugins>
-			<plugin>
-        		<artifactId>maven-antrun-plugin</artifactId>
-        		<executions>
-                	<execution>
-                        <id>Copy and rename module files</id>
-                        <phase>generate-sources</phase>
-                        <configuration>
-                            <tasks>
-                                <copy file="../commons/root/commons/UML Movalys Framework Profile.mdzip" todir="${project.build.directory}/classes/archetype-resources/docs/modelisation/" verbose="true" overwrite="true">
-                                </copy>
-                                <copy file="../commons/root/commons/MOV-MM-Referentiel_de_donnees-V1.0.xls" todir="${project.build.directory}/classes/archetype-resources/tools/" verbose="true" overwrite="true">
-                                </copy>
-                            </tasks>
-                        </configuration>
+
+		<resources>
+            <resource>
+                <directory>${project.build.directory}/parent</directory>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>
+
+    
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>2.10</version>
+                <executions>
+                    <execution>
+                        <id>unpack-dependencies</id>
+                        <phase>process-resources</phase>
                         <goals>
-                                <goal>run</goal>
+                            <goal>unpack-dependencies</goal>
                         </goals>
-                	</execution>
-        		</executions>
-			</plugin>
-		</plugins>
+                        <configuration>
+                            <!-- Prevents from overwriting files with upper level tmpl parent files -->
+                            <includeGroupIds>${parentTemplate.groupId}</includeGroupIds>
+                            <includeArtifactIds>${parentTemplate.artifactId}</includeArtifactIds>
+
+                            <outputDirectory>${project.build.directory}/parent</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.7</version>
+                <executions>
+                    <execution>
+                        <id>proces-resources</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>resources</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+        
 	</build>
 
 </project>
