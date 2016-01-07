@@ -12,7 +12,7 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
     GNU Lesser General Public License for more details.
     You should have received a copy of the GNU Lesser General Public License
-    along with Movalys MDK. If not, see <http://www.gnu.org/licenses />.
+    along with Movalys MDK. If not, see <http://www.gnu.org/licenses/>.
 
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -20,51 +20,113 @@
 
 	<parent>
 		<groupId>com.sopragroup.adeuza.movalysfwk.templates.my_expenses_demo</groupId>
-		<artifactId>mdk-my_expenses_demo-template</artifactId>
-		<version>6.0.0-SNAPSHOT</version>
+        <artifactId>mdk-my_expenses_demo-template</artifactId>
+        <version>6.0.0-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
-	</parent>	
-	
-	<artifactId>mdk-my_expenses_demo-project</artifactId>
-	<packaging>pom</packaging>
-	
-	<organization>
-	    <name>Sopra</name>
-	</organization>
+	</parent>
 
-	<licenses>
-		<license>
-			<name>GNU LGPL 3</name>
-			<url>http://www.gnu.org/licenses/lgpl.txt</url>
-			<distribution>repo</distribution>
-		</license>
-	</licenses>
-	
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<compileSource>1.7</compileSource>
-		<target>1.7</target>
-	</properties>
-	
+	<artifactId>mdk-my_expenses_demo-project</artifactId>
+	<packaging>jar</packaging>
+
+	<name>MDK My Expenses Demo Project</name>
+
+    <organization>
+        <name>Sopra Steria Group</name>
+    </organization>
+
+    <licenses>
+        <license>
+            <name>GNU LGPL 3</name>
+            <url>http://www.gnu.org/licenses/lgpl.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <compileSource>1.7</compileSource>
+        <target>1.7</target>
+
+        <parentTemplate.groupId>com.sopragroup.adeuza.movalysfwk.templates.design</parentTemplate.groupId>
+        <parentTemplate.artifactId>mdk-design-project</parentTemplate.artifactId>
+        <parentTemplate.version>6.0.0-SNAPSHOT</parentTemplate.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>${parentTemplate.groupId}</groupId>
+            <artifactId>${parentTemplate.artifactId}</artifactId>
+            <version>${parentTemplate.version}</version>
+        </dependency>
+    </dependencies>
+    
 	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-assembly-plugin</artifactId>
-				<configuration>
-					<descriptor>src/assembly/mdkproject.xml</descriptor>
-					<finalName>${project.artifactId}-${pom.version}</finalName>
-				</configuration>
-				<executions>
-					<execution>
-						<phase>package</phase>
-						<goals>
-							<goal>single</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
+
+		<resources>
+            <resource>
+                <directory>${project.build.directory}/parent</directory>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>
+
+    
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>2.10</version>
+                <executions>
+                    <execution>
+                        <id>unpack-dependencies</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>unpack-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <!-- Prevents from overwriting files with upper level tmpl parent files -->
+                            <includeGroupIds>${parentTemplate.groupId}</includeGroupIds>
+                            <includeArtifactIds>${parentTemplate.artifactId}</includeArtifactIds>
+
+                            <outputDirectory>${project.build.directory}/parent</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.7</version>
+                <executions>
+                    <execution>
+                        <id>proces-resources</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>resources</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <descriptor>${project.build.directory}/classes/assembly/mdkproject.xml</descriptor>
+                    <finalName>${project.artifactId}-${pom.version}</finalName>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+        
 	</build>
 
 </project>
