@@ -85,6 +85,10 @@
 							<goal>unpack-dependencies</goal>
 						</goals>
 						<configuration>
+							<!-- Prevents from overwriting files with upper level tmpl parent files -->
+                            <includeGroupIds>${parentTemplate.groupId}</includeGroupIds>
+                            <includeArtifactIds>${parentTemplate.artifactId}</includeArtifactIds>
+                            
 							<outputDirectory>${project.build.directory}/parent</outputDirectory>
 						</configuration>
 					</execution>
