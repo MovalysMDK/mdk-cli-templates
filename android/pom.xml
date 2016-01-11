@@ -41,21 +41,24 @@
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
-
-	<dependencies>
-		<dependency>
-			<groupId>com.sopragroup.adeuza.movalysfwk</groupId>
-			<version>6.0.1-SNAPSHOT</version>
-			<artifactId>mdk-android-project-template</artifactId>
-		</dependency>
-	</dependencies>
 	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<compileSource>1.7</compileSource>
 		<target>1.7</target>
-	</properties>
-	
+
+		<parentTemplate.groupId>com.sopragroup.adeuza.movalysfwk</parentTemplate.groupId>
+        <parentTemplate.artifactId>mdk-android-project-template</parentTemplate.artifactId>
+        <parentTemplate.version>6.0.1-SNAPSHOT</parentTemplate.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>${parentTemplate.groupId}</groupId>
+            <artifactId>${parentTemplate.artifactId}</artifactId>
+            <version>${parentTemplate.version}</version>
+        </dependency>
+    </dependencies>
 
 	<build>
 		<resources>
