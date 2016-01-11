@@ -42,19 +42,23 @@
 		</license>
 	</licenses>
 
-	<dependencies>
-		<dependency>
-			<groupId>com.sopragroup.adeuza.movalysfwk.templates.design</groupId>
-			<version>6.0.0-SNAPSHOT</version>
-			<artifactId>mdk-android-design-template</artifactId>
-		</dependency>
-	</dependencies>
-	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<compileSource>1.7</compileSource>
 		<target>1.7</target>
-	</properties>
+		
+		<parentTemplate.groupId>com.sopragroup.adeuza.movalysfwk.templates.design</parentTemplate.groupId>
+        <parentTemplate.artifactId>mdk-android-design-template</parentTemplate.artifactId>
+        <parentTemplate.version>6.0.0-SNAPSHOT</parentTemplate.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>${parentTemplate.groupId}</groupId>
+            <artifactId>${parentTemplate.artifactId}</artifactId>
+            <version>${parentTemplate.version}</version>
+        </dependency>
+    </dependencies>
 	
 
 	<build>
