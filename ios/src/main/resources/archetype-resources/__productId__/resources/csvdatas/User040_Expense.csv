@@ -1,4 +1,4 @@
-﻿identifier;typeidentifier;reportidentifier;description;amount;state;photoidentifier;
+﻿identifier;typeidentifier;reportidentifier;desc;amount;state;photoidentifier;
 "1";"3";"276";"Lorem ipsum";"48";"AMOUNTOK";"1";
 "2";"5";"232";"Lorem";"17";"AMOUNTOK";"2";
 "3";"2";"234";"Lorem ipsum dolor";"33";"AMOUNTOK";"3";

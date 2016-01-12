@@ -1,4 +1,4 @@
-﻿identifier;description;amountmax;category;
+﻿identifier;desc;amountmax;category;
 "1";"Hotel";"78";"HOTEL";
 "2";"Hotel + Breakfast";"90";"HOTEL";
 "3";"Train";"";"TRAIN";
