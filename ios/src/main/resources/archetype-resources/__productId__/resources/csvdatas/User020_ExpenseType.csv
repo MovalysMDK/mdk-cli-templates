@@ -1,0 +1,10 @@
+﻿identifier;description;amountmax;category;
+"1";"Hotel";"78";"HOTEL";
+"2";"Hotel + Breakfast";"90";"HOTEL";
+"3";"Train";"";"TRAIN";
+"4";"Parking";"";"CAR";
+"5";"Car rental";"";"CAR";
+"6";"Meal";"21";"MEAL";
+"7";"Other";"";"OTHER";
+
+
