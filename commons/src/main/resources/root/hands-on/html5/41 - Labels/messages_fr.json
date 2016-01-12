@@ -1,0 +1,23 @@
+{
+    "aboutpanel__title": "A propos",
+    "aboutscreen__title": "A propos",
+    "customeritempanel__title": "Client",
+    "enum__ExpenseCategory__CAR": "Voiture",
+    "enum__ExpenseCategory__HOTEL": "Hôtel",
+    "enum__ExpenseCategory__MEAL": "Repas",
+    "enum__ExpenseCategory__OTHER": "Autre",
+    "enum__ExpenseCategory__TRAIN": "Train",
+    "enum__ExpenseState__AMOUNTNONE": "Aucun",
+    "enum__ExpenseState__AMOUNTOK": "Montant valide",
+    "enum__ExpenseState__AMOUNTOVERMAX": "Montant dépassé",
+    "enum__ReportState__ACCEPTED": "Accepté",
+    "enum__ReportState__PENDING": "En cours",
+    "enum__ReportState__REFUSED": "Refusé",
+    "homescreen__title": "Accueil",
+    "myexpensesscreen__title": "Mes frais",
+    "mytravelbookscreen__title": "Mon carnet de voyage",
+    "reportdetailpanel__customer__label": "Client",
+    "reportdetailpanel__expenses__fixedlistdetail__type__label": "Type",
+    "reportdetailpanel__expenses__label": "Frais",
+    "reportdetailpanel__title": "Rapport"
+}
