@@ -757,16 +757,6 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/qLagarde/Documents/Tests,
-					"iOS/CarthageTest/GIT/Sandbox-CocoaTouchFramework/Carthage.build/iOS",
-					/Users/qLagarde/Documents/Tests,
-					iOS/EssaiCV/EssaiCV,
-					/Users/qLagarde/Documents/Tests,
-					iOS/MUI/MUI,
-					/Users/qLagarde/Documents/Tests,
-					iOS/TestCarthageApp/Carthage.build/iOS,
-					/Users/qLagarde/Documents/Tests,
-					"iOS/TestCarthageApp/Carthage.checkout/Sandbox-CocoaTouchFramework/Carthage.build/iOS",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ${productId}/src/Prefix.pch;
@@ -788,16 +778,6 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/qLagarde/Documents/Tests,
-					"iOS/CarthageTest/GIT/Sandbox-CocoaTouchFramework/Carthage.build/iOS",
-					/Users/qLagarde/Documents/Tests,
-					iOS/EssaiCV/EssaiCV,
-					/Users/qLagarde/Documents/Tests,
-					iOS/MUI/MUI,
-					/Users/qLagarde/Documents/Tests,
-					iOS/TestCarthageApp/Carthage.build/iOS,
-					/Users/qLagarde/Documents/Tests,
-					"iOS/TestCarthageApp/Carthage.checkout/Sandbox-CocoaTouchFramework/Carthage.build/iOS",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ${productId}/src/Prefix.pch;
