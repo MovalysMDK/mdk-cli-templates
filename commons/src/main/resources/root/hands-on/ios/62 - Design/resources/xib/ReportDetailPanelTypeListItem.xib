@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10089" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10072.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" userLabel="First Responder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReportDetailPanelTypeListItem" rowHeight="66" id="ReportDetailPanelTypeListItem-view" customClass="ReportDetailPanelTypeListItem">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="66"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ReportDetailPanelTypeListItem-view" id="ReportDetailPanelTypeListItem-contentview">
+                <rect key="frame" x="0.0" y="0.0" width="600" height="66"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MReportDetailPanelTypeComboItemControllerController-desc-value" userLabel="desc (MDKTextField)" customClass="MDKTextField">
+                        <rect key="frame" x="66" y="8" width="524" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="d6N-jp-CGS"/>
+                        </constraints>
+                    </view>
+                    <view opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MReportDetailPanelTypeComboItemControllerController-category-value" userLabel="category (MDKEnumImage)" customClass="MDKEnumImage">
+                        <rect key="frame" x="8" y="8" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="Ewy-ir-8JO"/>
+                            <constraint firstAttribute="height" constant="50" id="nWi-Tq-id1"/>
+                        </constraints>
+                    </view>
+                    <view opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MReportDetailPanelTypeComboItemControllerController-amountMax-value" userLabel="amountMax (MDKDoubleTextField)" customClass="MDKTextField">
+                        <rect key="frame" x="66" y="34" width="526" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="igo-Uy-0KZ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="topMargin" secondItem="MReportDetailPanelTypeComboItemControllerController-desc-value" secondAttribute="top" id="7qN-eT-4x8"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="MReportDetailPanelTypeComboItemControllerController-category-value" secondAttribute="leading" id="NJn-Ya-gU7"/>
+                    <constraint firstItem="MReportDetailPanelTypeComboItemControllerController-amountMax-value" firstAttribute="top" secondItem="MReportDetailPanelTypeComboItemControllerController-desc-value" secondAttribute="bottom" constant="1" id="Pj9-YQ-g5V"/>
+                    <constraint firstAttribute="topMargin" secondItem="MReportDetailPanelTypeComboItemControllerController-category-value" secondAttribute="top" id="bJ8-Ce-d7g"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="MReportDetailPanelTypeComboItemControllerController-amountMax-value" secondAttribute="trailing" id="f60-fG-MRt"/>
+                    <constraint firstItem="MReportDetailPanelTypeComboItemControllerController-desc-value" firstAttribute="leading" secondItem="MReportDetailPanelTypeComboItemControllerController-category-value" secondAttribute="trailing" constant="8" id="hx1-IA-Hmz"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="MReportDetailPanelTypeComboItemControllerController-desc-value" secondAttribute="trailing" constant="2" id="oRN-5n-1g1"/>
+                    <constraint firstItem="MReportDetailPanelTypeComboItemControllerController-amountMax-value" firstAttribute="leading" secondItem="MReportDetailPanelTypeComboItemControllerController-category-value" secondAttribute="trailing" constant="8" id="vxS-EL-ZLf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="amountMaxValue" destination="MReportDetailPanelTypeComboItemControllerController-amountMax-value" id="MReportDetailPanelTypeComboItemControllerController-amountMax-value-outlet"/>
+                <outlet property="categoryValue" destination="MReportDetailPanelTypeComboItemControllerController-category-value" id="MReportDetailPanelTypeComboItemControllerController-category-value-outlet"/>
+                <outlet property="descValue" destination="MReportDetailPanelTypeComboItemControllerController-desc-value" id="MReportDetailPanelTypeComboItemControllerController-desc-value-outlet"/>
+            </connections>
+            <point key="canvasLocation" x="323" y="162"/>
+        </tableViewCell>
+    </objects>
+</document>

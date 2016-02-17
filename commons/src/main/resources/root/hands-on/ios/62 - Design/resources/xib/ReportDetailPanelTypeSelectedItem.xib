@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10089" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10089"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" userLabel="First Responder"/>
+        <view contentMode="scaleToFill" id="ReportDetailPanelTypeSelectedItem-view" customClass="ReportDetailPanelTypeSelectedItem">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="66"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <view opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MReportDetailPanelTypeComboItemControllerController-category-value" userLabel="category (MDKEnumImage)" customClass="MDKEnumImage">
+                    <rect key="frame" x="8" y="8" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="K2G-BQ-WB7"/>
+                        <constraint firstAttribute="width" constant="50" id="MT0-xY-aK0"/>
+                    </constraints>
+                </view>
+                <view opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MReportDetailPanelTypeComboItemControllerController-desc-value" userLabel="desc (MDKTextField)" customClass="MDKTextField">
+                    <rect key="frame" x="66" y="8" width="526" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="4rV-Nx-dap"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="MReportDetailPanelTypeComboItemControllerController-desc-value" firstAttribute="top" secondItem="ReportDetailPanelTypeSelectedItem-view" secondAttribute="top" constant="8" id="04f-aW-CSs"/>
+                <constraint firstItem="MReportDetailPanelTypeComboItemControllerController-desc-value" firstAttribute="leading" secondItem="MReportDetailPanelTypeComboItemControllerController-category-value" secondAttribute="trailing" constant="8" id="N5i-PW-eET"/>
+                <constraint firstItem="MReportDetailPanelTypeComboItemControllerController-category-value" firstAttribute="top" secondItem="ReportDetailPanelTypeSelectedItem-view" secondAttribute="top" constant="8" id="eA8-vE-UIF"/>
+                <constraint firstItem="MReportDetailPanelTypeComboItemControllerController-category-value" firstAttribute="leading" secondItem="ReportDetailPanelTypeSelectedItem-view" secondAttribute="leading" constant="8" id="qT3-DG-viz"/>
+                <constraint firstAttribute="trailing" secondItem="MReportDetailPanelTypeComboItemControllerController-desc-value" secondAttribute="trailing" constant="8" id="wVX-cT-rCL"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="categoryValue" destination="MReportDetailPanelTypeComboItemControllerController-category-value" id="MReportDetailPanelTypeComboItemControllerController-category-value-outlet"/>
+                <outlet property="descValue" destination="MReportDetailPanelTypeComboItemControllerController-desc-value" id="MReportDetailPanelTypeComboItemControllerController-desc-value-outlet"/>
+            </connections>
+            <point key="canvasLocation" x="305" y="-78"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10089" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2135088506">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10072.1"/>
+    </dependencies>
+    <scenes>
+        <!--About Screen Controller-->
+        <scene sceneID="1902846202">
+            <objects>
+                <viewController storyboardIdentifier="MAboutScreenController" id="2135088506" customClass="MAboutScreenController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2135088506-LG-top"/>
+                        <viewControllerLayoutGuide type="bottom" id="2135088506-LG-bottom"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="402588514">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <subviews>
+                            <tableView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="TopLeft" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="402588514-TV">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="320" id="402588514-TV-width-greaterThanOrEqual"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MDKWebViewCell-noLabel" rowHeight="520" id="FWK-402588514-MDKWebViewCell-noLabel" customClass="MFCell1ComponentHorizontal">
+                                        <rect key="frame" x="0.0" y="50" width="600" height="520"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FWK-402588514-MDKWebViewCell-noLabel" id="FWK-402588514-MDKWebViewCell-noLabel-Content">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="520"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FWK-402588514-MDKWebViewCell-noLabel-C" customClass="MDKWebView"/>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="FWK-402588514-MDKWebViewCell-noLabel-C" secondAttribute="bottom" constant="10" id="FWK-402588514-MDKWebViewCell-noLabel-C-bottom-bottom"/>
+                                                <constraint firstItem="FWK-402588514-MDKWebViewCell-noLabel-C" firstAttribute="leading" secondItem="FWK-402588514-MDKWebViewCell-noLabel-Content" secondAttribute="leading" constant="10" id="FWK-402588514-MDKWebViewCell-noLabel-C-leading-leading"/>
+                                                <constraint firstItem="FWK-402588514-MDKWebViewCell-noLabel-C" firstAttribute="top" secondItem="FWK-402588514-MDKWebViewCell-noLabel-Content" secondAttribute="top" constant="10" id="FWK-402588514-MDKWebViewCell-noLabel-C-top-top"/>
+                                                <constraint firstItem="FWK-402588514-MDKWebViewCell-noLabel-C" firstAttribute="trailing" secondItem="FWK-402588514-MDKWebViewCell-noLabel-Content" secondAttribute="trailing" constant="-10" id="FWK-402588514-MDKWebViewCell-noLabel-C-trailing-trailing"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <attributedString key="userComments">
+                                            <fragment>
+                                                <string key="content">*** Definition of the height of this cell *** Find the configurationName of the item having typeName='MDKWebViewCell', in the file "resources/plist/sections/section-AboutPanel.plist" . Then, find the height of this cell in the file whose name is "conf-[configurationName]cell.plist", in the folder "resources/plist/configuration"</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="12" name="Helvetica"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <connections>
+                                            <outlet property="componentView" destination="FWK-402588514-MDKWebViewCell-noLabel-C" id="FWK-402588514-MDKWebViewCell-noLabel-C-outlet"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="2135088506" id="402588514-TV-OUT-DTS"/>
+                                    <outlet property="delegate" destination="2135088506" id="402588514-TV-OUT-DLG"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="402588514-TV" firstAttribute="bottom" secondItem="402588514" secondAttribute="bottom" id="402588514-bottom-bottom-1"/>
+                            <constraint firstItem="402588514-TV" firstAttribute="centerX" secondItem="402588514" secondAttribute="centerX" id="402588514-centerX-centerX-5"/>
+                            <constraint firstItem="402588514-TV" firstAttribute="leading" secondItem="402588514" secondAttribute="leading" id="402588514-leading-leading-4"/>
+                            <constraint firstItem="402588514-TV" firstAttribute="top" secondItem="402588514" secondAttribute="top" id="402588514-top-top-3"/>
+                            <constraint firstItem="402588514-TV" firstAttribute="trailing" secondItem="402588514" secondAttribute="trailing" id="402588514-trailing-trailing-2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="402588514-TV" id="402588514-OUT-TV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1691145875" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+</document>

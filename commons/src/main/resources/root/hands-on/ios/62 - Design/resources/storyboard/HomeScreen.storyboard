@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10089" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="705112344">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10072.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Home Screen-->
+        <scene sceneID="654199461">
+            <objects>
+                <viewController storyboardIdentifier="MFViewController" title="Home Screen" id="2098949787" customClass="MHomeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2098949787-LG-top"/>
+                        <viewControllerLayoutGuide type="bottom" id="2098949787-LG-bottom"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="229465023">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view opaque="NO" tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="button-navigate-MonCarnetDeVoyageScreen" customClass="MHomeButton">
+                                <rect key="frame" x="-4" y="0.0" width="328" height="167"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="keyPath.storyboardTargetName" value="MyTravelBookScreen"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view opaque="NO" tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="button-navigate-AboutScreen" customClass="MHomeButton">
+                                <rect key="frame" x="-4" y="338" width="328" height="166"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="keyPath.storyboardTargetName" value="AboutScreen"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view opaque="NO" tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="button-navigate-MesNotesScreen" customClass="MHomeButton">
+                                <rect key="frame" x="-4" y="167" width="328" height="171"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="keyPath.storyboardTargetName" value="MyExpensesScreen"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="button-navigate-AboutScreen" firstAttribute="leading" secondItem="229465023" secondAttribute="leadingMargin" constant="-20" id="1ea-8u-l64"/>
+                            <constraint firstItem="button-navigate-AboutScreen" firstAttribute="height" secondItem="229465023" secondAttribute="height" multiplier="0.33" id="5w7-2Z-JtQ"/>
+                            <constraint firstItem="button-navigate-MonCarnetDeVoyageScreen" firstAttribute="top" secondItem="2098949787-LG-top" secondAttribute="bottom" id="9PW-M2-6T8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="button-navigate-MonCarnetDeVoyageScreen" secondAttribute="trailing" constant="-20" id="9RA-Zm-lZg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="button-navigate-AboutScreen" secondAttribute="trailing" constant="-20" id="9Sp-Iw-p5J"/>
+                            <constraint firstItem="2098949787-LG-bottom" firstAttribute="top" secondItem="button-navigate-AboutScreen" secondAttribute="bottom" id="ABy-A3-TiI"/>
+                            <constraint firstItem="button-navigate-MonCarnetDeVoyageScreen" firstAttribute="height" secondItem="229465023" secondAttribute="height" multiplier="0.33" id="VWG-Rh-j90"/>
+                            <constraint firstItem="button-navigate-MesNotesScreen" firstAttribute="leading" secondItem="button-navigate-MonCarnetDeVoyageScreen" secondAttribute="leading" id="WQK-cR-akb"/>
+                            <constraint firstItem="button-navigate-AboutScreen" firstAttribute="top" secondItem="button-navigate-MesNotesScreen" secondAttribute="bottom" id="bz9-SQ-qxG"/>
+                            <constraint firstItem="button-navigate-MesNotesScreen" firstAttribute="top" secondItem="button-navigate-MonCarnetDeVoyageScreen" secondAttribute="bottom" id="eMm-nS-2Sg"/>
+                            <constraint firstItem="button-navigate-MonCarnetDeVoyageScreen" firstAttribute="leading" secondItem="229465023" secondAttribute="leadingMargin" constant="-20" id="kn7-gr-K0j"/>
+                            <constraint firstItem="button-navigate-MesNotesScreen" firstAttribute="trailing" secondItem="button-navigate-MonCarnetDeVoyageScreen" secondAttribute="trailing" id="rzn-HD-9I8"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" id="943669887"/>
+                    <connections>
+                        <outlet property="aboutButton" destination="button-navigate-AboutScreen" id="dTs-Dh-Xc0"/>
+                        <outlet property="carnetButton" destination="button-navigate-MonCarnetDeVoyageScreen" id="sGC-TU-eQV"/>
+                        <outlet property="notesButton" destination="button-navigate-MesNotesScreen" id="zr0-pg-qft"/>
+                        <outletCollection property="buttons" destination="button-navigate-MonCarnetDeVoyageScreen" id="kzP-BB-Lsf"/>
+                        <outletCollection property="buttons" destination="button-navigate-MesNotesScreen" id="WWV-dL-KEK"/>
+                        <outletCollection property="buttons" destination="button-navigate-AboutScreen" id="GqG-VM-7PN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="854390388" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="485" y="0.0"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="474068132">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="705112344" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1730176591">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="2098949787" kind="relationship" relationship="rootViewController" id="367201687"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1000054699" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+</document>
