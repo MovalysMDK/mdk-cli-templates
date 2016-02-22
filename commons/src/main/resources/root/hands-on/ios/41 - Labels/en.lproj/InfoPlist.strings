@@ -1,9 +1,0 @@
-//
-//  InfoPlist.strings
-//
-//  Created by Movalys MDK.
-//  Copyright (c) 2014 Sopra. All rights reserved.
-//
-
-"CFBundleDisplayName" = "myexpenses2";
-"CFBundleName" = "myexpenses2";

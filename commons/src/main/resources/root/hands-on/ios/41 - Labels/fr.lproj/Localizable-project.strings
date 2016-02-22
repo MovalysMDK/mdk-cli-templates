@@ -1,9 +1,0 @@
-//
-//  Localizable-project.strings
-//
-//  Created by Movalys MDK.
-//  Copyright (c) 2012 Sopra Group. All rights reserved.
-//
-
-//@generated-start[gen-labels][X]
-"aboutpanel__url__label" = "Url";"address__label" = "Address";"amount__label" = "Amount";"amountMax__label" = "Amount max";"category__label" = "Category";"date__label" = "Date";"desc__label" = "Desc";"MVMReportDetailPanelType__label" = "MVMReport detail panel type";"name__label" = "Name";"photo__label" = "Photo";"reason__label" = "Reason";"reportdetailpanel__amountTotal__label" = "Amount total";"reportdetailpanel__date__label" = "Date";"reportdetailpanel__MVMReportDetailPanelCustomer__label" = "MVMReport detail panel customer";"reportdetailpanel__MVMReportDetailPanelExpensesList__label" = "MVMReport detail panel expenses list";"reportdetailpanel__reason__label" = "Reason";"screen_title_MAboutScreenController" = "About screen";"screen_title_MHomeScreenController" = "Home screen";"screen_title_MMyTravelBookScreenController" = "My travel book screen";"screen_title_MReportDetailPanelExpensesItemDetailController" = "Report detail panel expenses item detail";"selectedMVMReportDetailPanelTypeItem_amountMax__label" = "Selected mVMReport detail panel type item_amount max";"selectedMVMReportDetailPanelTypeItem_category__label" = "Selected mVMReport detail panel type item_category";"selectedMVMReportDetailPanelTypeItem_desc__label" = "Selected mVMReport detail panel type item_desc";"state__label" = "State";"workspace_title_MyExpensesScreen" = "My expenses screen";//@generated-end

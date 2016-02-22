@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-	<string name="app_name">Mes notes de frais</string>
-	<string name="splash_version">Mes notes de frais - %1$s</string><!-- %1$s remplacé par le numéro de version -->	
-</resources>
