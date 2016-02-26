@@ -2,7 +2,7 @@
 
 ## What?
 
-The mdk-cli-templates contains the project templates used by MDK CLI.
+mdk-cli-templates contains the project templates used by MDK CLI.
 
 ## Documentation
 
