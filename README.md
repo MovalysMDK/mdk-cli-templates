@@ -1,9 +1,8 @@
 # mdk-cli-templates
-**Movalys MDK: Movalys MDK-Cli**
 
 ## What?
 
-The mdk-cli-templates is part of the Movalys MDK-Cli and provides high layer features for project creation. 
+The mdk-cli-templates contains the project templates used by MDK CLI.
 
 ## Documentation
 
