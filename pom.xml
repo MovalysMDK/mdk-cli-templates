@@ -127,14 +127,13 @@
 					<properties>
 						<owner>Sopra Steria Group</owner>
 						<email>movalys.support@soprasteria.com</email>
-						<year>2010</year>
+						<year>2016</year>
 						<project.name>Movalys MDK</project.name>
 					</properties>
 				</configuration>
 				<executions>
 					<execution>
 						<id>format-licence</id>
-						<phase>verify</phase>
 						<goals>
 							<goal>format</goal>
 						</goals>
