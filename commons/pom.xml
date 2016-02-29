@@ -49,7 +49,7 @@
 
         <parentTemplate.groupId>com.sopragroup.adeuza.movalysfwk.templates.basic</parentTemplate.groupId>
         <parentTemplate.artifactId>mdk-basic-project</parentTemplate.artifactId>
-        <parentTemplate.version>6.2.0-SNAPSHOT</parentTemplate.version>
+        <parentTemplate.version>6.2.0</parentTemplate.version>
     </properties>
 
     <dependencies>
