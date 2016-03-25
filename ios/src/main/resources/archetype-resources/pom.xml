@@ -179,7 +179,7 @@
 							<execution>
 								<id>update-xcodeproj</id>
 								<inherited>false</inherited>
-								<phase>generate-sources</phase>
+								<phase>initialize</phase>
 								<goals>
 									<goal>mfxcode</goal>
 								</goals>
