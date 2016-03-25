@@ -120,7 +120,7 @@
 										<tasks>
 											<replace file="${project.build.directory}/classes/archetype-resources/add_theme_report.xml">
 												<replacetoken><![CDATA[__artifactId__]]></replacetoken>
-												<replacevalue><![CDATA[${artifactId}]]></replacevalue>
+												<replacevalue><![CDATA[${parentTemplate.artifactId}]]></replacevalue>
 											</replace>
 										</tasks>
 									</configuration>
