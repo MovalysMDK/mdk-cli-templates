@@ -2,23 +2,23 @@
 <report>
     <files>
         <file>
-            <fullName>${artifactId}/src/theme/SopraSteriaTheme.m</fullName>
+            <fullName>__artifactId__/src/theme/SopraSteriaTheme.m</fullName>
             <shortName>SopraSteriaTheme.m</shortName>
             <dirName>${artifactId}/src/theme</dirName>
             <injection>false</injection>
             <paths>
-                <path>${artifactId}</path>
+                <path>__artifactId__</path>
                 <path>src</path>
                 <path>theme</path>
             </paths>
         </file>
         <file>
-            <fullName>${artifactId}/src/theme/SopraSteriaTheme.h</fullName>
+            <fullName>__artifactId__/src/theme/SopraSteriaTheme.h</fullName>
             <shortName>SopraSteriaTheme.h</shortName>
-            <dirName>${artifactId}/src/theme</dirName>
+            <dirName>__artifactId__/src/theme</dirName>
             <injection>false</injection>
             <paths>
-                <path>${artifactId}</path>
+                <path>__artifactId__</path>
                 <path>src</path>
                 <path>theme</path>
             </paths>
