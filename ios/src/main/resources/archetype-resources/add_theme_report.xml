@@ -23,5 +23,38 @@
                 <path>theme</path>
             </paths>
         </file>
+        <file>
+            <fullName>__artifactId__/src/theme/UIColor+SopraSteria.m</fullName>
+            <shortName>UIColor+SopraSteria.m</shortName>
+            <dirName>__artifactId__/src/theme</dirName>
+            <injection>false</injection>
+            <paths>
+                <path>__artifactId__</path>
+                <path>src</path>
+                <path>theme</path>
+            </paths>
+        </file>
+        <file>
+            <fullName>__artifactId__/src/theme/UIColor+SopraSteria.h</fullName>
+            <shortName>UIColor+SopraSteria.h</shortName>
+            <dirName>__artifactId__/src/theme</dirName>
+            <injection>false</injection>
+            <paths>
+                <path>__artifactId__</path>
+                <path>src</path>
+                <path>theme</path>
+            </paths>
+        </file>
+        <file>
+            <fullName>__artifactId__/resources/plist/Framework-theme.plist</fullName>
+            <shortName>Framework-theme.plist</shortName>
+            <dirName>__artifactId__/resources/plist</dirName>
+            <injection>false</injection>
+            <paths>
+                <path>__artifactId__</path>
+                <path>resources</path>
+                <path>plist</path>
+            </paths>
+        </file>
     </files>
 </report>
