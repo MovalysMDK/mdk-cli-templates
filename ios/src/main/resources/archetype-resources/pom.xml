@@ -217,7 +217,7 @@
 						<executions>
 							<execution>
 								<id>Copy commons resources inside each platform</id>
-								<phase>process-resources</phase>
+								<phase>verify</phase>
 								<inherited>false</inherited>
 								<configuration>
 									<tasks>
