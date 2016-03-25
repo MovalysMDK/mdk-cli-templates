@@ -4,7 +4,7 @@
         <file>
             <fullName>__artifactId__/src/theme/SopraSteriaTheme.m</fullName>
             <shortName>SopraSteriaTheme.m</shortName>
-            <dirName>${artifactId}/src/theme</dirName>
+            <dirName>__artifactId__/src/theme</dirName>
             <injection>false</injection>
             <paths>
                 <path>__artifactId__</path>
