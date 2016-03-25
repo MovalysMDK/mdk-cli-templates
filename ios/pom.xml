@@ -109,28 +109,6 @@
                 </executions>
             </plugin>
 
-						<plugin>
-							<artifactId>maven-antrun-plugin</artifactId>
-							<executions>
-								<execution>
-									<id>Copy commons resources inside each platform</id>
-									<phase>process-resources</phase>
-									<inherited>false</inherited>
-									<configuration>
-										<tasks>
-											<replace file="${project.build.directory}/classes/archetype-resources/add_theme_report.xml">
-												<replacetoken><![CDATA[__artifactId__]]></replacetoken>
-												<replacevalue><![CDATA[${parentTemplate.artifactId}]]></replacevalue>
-											</replace>
-										</tasks>
-									</configuration>
-									<goals>
-										<goal>run</goal>
-									</goals>
-								</execution>
-							</executions>
-						</plugin>
-
         </plugins>
 
 	</build>
