@@ -51,6 +51,10 @@
     [controller.navigationController.navigationBar setTitleTextAttributes:@{ NSForegroundColorAttributeName:[UIColor sopraSteriaWhite] }];
 }
 
+- (void)applyThemeOnMDKFloatingButton:(UIButton *)button {
+    [button setBackgroundColor:[UIColor sopraSteriaPrimary]];
+}
+
 - (void)applyThemeOnMDKUITextField:(MDKTextField *)textField {
     textField.textColor = [UIColor sopraSteriaTextColor];
 }
