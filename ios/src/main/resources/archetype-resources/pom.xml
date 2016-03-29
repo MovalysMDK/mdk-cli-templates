@@ -115,6 +115,27 @@
 			<build>
 				<plugins>
 					<plugin>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>Copy commons resources inside each platform</id>
+								<phase>initialize</phase>
+								<inherited>false</inherited>
+								<configuration>
+									<tasks>
+										<replace file="add_theme_report.xml">
+											<replacetoken><![CDATA[__artifactId__]]></replacetoken>
+											<replacevalue><![CDATA[${artifactId}]]></replacevalue>
+										</replace>
+									</tasks>
+								</configuration>
+								<goals>
+									<goal>run</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
 						<groupId>com.adeuza</groupId>
 						<artifactId>adjava-maven-plugin</artifactId>
 						<version>${adjava.version}</version>
