@@ -66,6 +66,7 @@
 		<module>ios</module>
 		<module>android</module>
 		<module>html5</module>
+		<module>win8</module>
 	</modules>
 	
 	<build>
