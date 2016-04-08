@@ -59,7 +59,7 @@
 
     MFTableConfiguration *tableConfiguration = [MFTableConfiguration createTableConfigurationForObjectWithBinding:self];
 
-//@non-generated-start[createBindingStructure-fixedlist][X]
+//@non-generated-start[createBindingStructure-fixedlist]
     MFBindingCellDescriptor *ReportDetailPanelExpensesViewCellDescriptor =
         [MFBindingCellDescriptor cellDescriptorWithIdentifier:@"ReportDetailPanelExpensesItemCell"
                                                withCellHeight:@(442)

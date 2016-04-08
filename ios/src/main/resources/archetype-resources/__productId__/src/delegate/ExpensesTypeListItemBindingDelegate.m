@@ -54,7 +54,7 @@
 - (void) createListItemBindingStructure:(MFPickerListConfiguration *)pickerListConfiguration
 {
 
-//@non-generated-start[createListItemBindingStructure-method][X]
+//@non-generated-start[createListItemBindingStructure-method]
     MFBindingCellDescriptor *cellDescriptor =
         [MFBindingCellDescriptor cellDescriptorWithIdentifier:@"ReportDetailPanelTypeListItem"
                                                withCellHeight:@(152)

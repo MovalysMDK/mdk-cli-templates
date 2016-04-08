@@ -62,7 +62,7 @@
 
     MFTableConfiguration *tableConfiguration = [MFTableConfiguration createTableConfigurationForObjectWithBinding:self];
 
-//@non-generated-start[createBindingStructure-table][X]
+//@non-generated-start[createBindingStructure-table]
     //MReportDetailPanelExpensesItemDetailController
     [tableConfiguration createTableSectionWithName:@"MReportDetailPanelExpensesItemDetailController"];
 

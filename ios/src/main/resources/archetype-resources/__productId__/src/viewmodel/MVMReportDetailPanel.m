@@ -287,7 +287,7 @@
 }
 
 
-//@non-generated-start[other-methods][X]
+//@non-generated-start[other-methods]
 
 - (void)createViewModelConfiguration {
     MFViewModelConfiguration *config = [MFViewModelConfiguration configurationForViewModel:self];

@@ -159,7 +159,7 @@
 }
 
 
-//@non-generated-start[other-methods][X]
+//@non-generated-start[other-methods]
 - (NSString *)humanReadableAmount {
     return [self humanReadableAmountFromNumber:self.amountMax];
 }
