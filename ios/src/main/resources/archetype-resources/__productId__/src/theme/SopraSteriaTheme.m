@@ -60,7 +60,7 @@
 }
 
 - (void)applyThemeOnMDKLabel:(MDKLabel *)label {
-    label.textColor = [UIColor sopraSteriaPrimary];
+    label.textColor = [UIColor sopraSteriaTextColor];
 }
 
 @end
