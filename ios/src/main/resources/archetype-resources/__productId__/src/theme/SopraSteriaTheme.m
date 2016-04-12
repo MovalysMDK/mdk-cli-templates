@@ -63,4 +63,8 @@
     label.textColor = [UIColor sopraSteriaTextColor];
 }
 
+- (void)applyThemeOnMDKUIAlertController:(MDKUIAlertController *)alertController {
+    alertController.view.tintColor = [UIColor sopraSteriaPrimary];
+}
+
 @end
