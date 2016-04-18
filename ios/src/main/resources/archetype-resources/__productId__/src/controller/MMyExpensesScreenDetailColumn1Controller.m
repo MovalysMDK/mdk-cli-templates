@@ -66,7 +66,7 @@
 
     MFTableConfiguration *tableConfiguration = [MFTableConfiguration createTableConfigurationForObjectWithBinding:self];
 
-//@non-generated-start[createBindingStructure-table][X]
+//@non-generated-start[createBindingStructure-table]
     //ReportDetailPanel
     [tableConfiguration createTableSectionWithName:@"ReportDetailPanel"];
 
@@ -116,8 +116,7 @@
                                         withCellBindingFormat:
          @"outlet.componentView.binding : c.data<->vm.mVMReportDetailPanel.mVMReportDetailPanelExpensesList",
          @"outlet.componentView.associatedLabel : outlet.label",
-         @"outlet.label.binding : c.data<-i18n.reportdetailpanel__MVMReportDetailPanelExpensesList__label",
-         @"outlet.componentView.attributes : mandatory=NO, canDelete=YES, canSelect=YES, dataDelegate=ReportDetailPanelExpensesView, canMove=NO, ",
+         @"outlet.componentView.attributes : mandatory=NO, canDelete=YES, canSelect=YES, title=reportdetailpanel__MVMReportDetailPanelExpensesList__label, dataDelegate=ReportDetailPanelExpensesView, canMove=NO, ",
          nil];
     [tableConfiguration createTableCellWithDescriptor:ReportDetailPanel_mVMReportDetailPanelExpensesListEditCellDescriptor];
 //@non-generated-end
