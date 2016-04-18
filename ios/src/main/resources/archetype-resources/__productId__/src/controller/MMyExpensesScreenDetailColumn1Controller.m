@@ -66,7 +66,7 @@
 
     MFTableConfiguration *tableConfiguration = [MFTableConfiguration createTableConfigurationForObjectWithBinding:self];
 
-//@non-generated-start[createBindingStructure-table]
+//@non-generated-start[createBindingStructure-table][X]
     //ReportDetailPanel
     [tableConfiguration createTableSectionWithName:@"ReportDetailPanel"];
 
