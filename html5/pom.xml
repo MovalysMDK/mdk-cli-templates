@@ -49,7 +49,7 @@
 
         <parentTemplate.groupId>com.sopragroup.adeuza.movalysfwk</parentTemplate.groupId>
         <parentTemplate.artifactId>mdk-html5-project-template</parentTemplate.artifactId>
-        <parentTemplate.version>6.3.3</parentTemplate.version>
+        <parentTemplate.version>6.4.0-SNAPSHOT</parentTemplate.version>
     </properties>
 
     <dependencies>
