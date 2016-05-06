@@ -11,7 +11,7 @@ import com.adeuza.movalysfwk.mobile.mf4mjcommons.ui.model.listener.FixedListView
 import com.adeuza.movalysfwk.mobile.mf4mjcommons.ui.model.listener.ListenerOnCollectionModified;
 import com.adeuza.movalysfwk.mobile.mf4mjcommons.ui.model.listener.ListenerOnFieldModified;
 import com.adeuza.movalysfwk.mobile.mf4mjcommons.utils.DateUtils;
-import com.soprasteria.mdk.handson.loader.MyExpensesScreenDetailLoader;
+import com.soprasteria.mdk.handson.myexpenses.loader.MyExpensesScreenDetailLoader;
 import com.soprasteria.mdk.handson.myexpenses.model.Customer;
 import com.soprasteria.mdk.handson.myexpenses.model.CustomerFactory;
 import com.soprasteria.mdk.handson.myexpenses.model.Expense;
@@ -19,7 +19,7 @@ import com.soprasteria.mdk.handson.myexpenses.model.ExpenseFactory;
 import com.soprasteria.mdk.handson.myexpenses.model.ExpenseType;
 import com.soprasteria.mdk.handson.myexpenses.model.Report;
 import com.soprasteria.mdk.handson.myexpenses.model.ReportFactory;
-import com.soprasteria.mdk.handson.viewmodel.ViewModelCreator;
+import com.soprasteria.mdk.handson.myexpenses.viewmodel.ViewModelCreator;
 
 import java.sql.Date;
 import java.sql.Timestamp;

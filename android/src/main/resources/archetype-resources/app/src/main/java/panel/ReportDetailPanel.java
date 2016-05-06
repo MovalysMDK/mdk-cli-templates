@@ -26,8 +26,8 @@ import com.adeuza.movalysfwk.mobile.mf4mjcommons.actiontask.listener.ListenerOnA
 import com.adeuza.movalysfwk.mobile.mf4mjcommons.business.genericdisplay.InDisplayParameter;
 import com.adeuza.movalysfwk.mobile.mf4mjcommons.ui.model.ListViewModel;
 import com.adeuza.movalysfwk.mobile.mf4mjcommons.ui.model.ViewModel;
-import com.soprasteria.mdk.handson.R;
-import com.soprasteria.mdk.handson.loader.MyExpensesScreenDetailLoader;
+import com.soprasteria.mdk.handson.myexpenses.R;
+import com.soprasteria.mdk.handson.myexpenses.loader.MyExpensesScreenDetailLoader;
 import com.soprasteria.mdk.handson.myexpenses.action.deletereportdetailpanel.DeleteReportDetailPanel;
 import com.soprasteria.mdk.handson.myexpenses.action.savereportdetailpanel.SaveReportDetailPanel;
 import com.soprasteria.mdk.handson.myexpenses.model.Customer;
