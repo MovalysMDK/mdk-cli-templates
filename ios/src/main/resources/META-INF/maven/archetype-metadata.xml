@@ -58,7 +58,6 @@
 				<include>**/*.strings</include>
 				<include>**/*.nss</include>
 				<include>**/*.json</include>
-				<include>**/*.storyboard</include>
 			</includes>
 			<excludes>
 				<exclude>**/*.png</exclude>
@@ -76,6 +75,7 @@
 				<include>**/*.vpp</include>
 				<include>**/.keep</include>
 				<include>**/*.xib</include>
+				<include>**/*.storyboard</include>
 				<include>**/*.xls</include>
 				<include>**/*.mdzip</include>
 				<include>**/*.html</include>
