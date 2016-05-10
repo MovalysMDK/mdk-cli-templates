@@ -21,6 +21,7 @@
                 <include>add_override_report.xml</include>
 				<include>remove_theme_report.xml</include>
                 <include>remove_override_report.xml</include>
+                <include>HomeScreen.storyboard</include>
 			</includes>
 	    </fileSet>
 
@@ -75,7 +76,6 @@
 				<include>**/*.vpp</include>
 				<include>**/.keep</include>
 				<include>**/*.xib</include>
-				<include>**/*.storyboard</include>
 				<include>**/*.xls</include>
 				<include>**/*.mdzip</include>
 				<include>**/*.html</include>
