@@ -248,7 +248,7 @@
 
 
         <!-- === RESOURCES - XCASSETS === -->
-        <file>
+  <!--       <file>
             <fullName>__artifactId__/resources/img/Images.xcassets</fullName>
             <shortName>Images.xcassets</shortName>
             <dirName>__artifactId__/resources/img</dirName>
@@ -258,7 +258,7 @@
                 <path>resources</path>
                 <path>img</path>
             </paths>
-        </file>
+        </file> -->
         <!-- === RESOURCES - XCASSETS === -->
     </files>
 </report>
