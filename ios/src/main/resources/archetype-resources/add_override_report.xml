@@ -205,7 +205,7 @@
                 <path>storyboard</path>
             </paths>
         </file>
-        <file>
+<!--         <file>
             <fullName>__artifactId__/resources/storyboard/HomeScreen.storyboard</fullName>
             <shortName>HomeScreen.storyboard</shortName>
             <dirName>__artifactId__/resources/storyboard</dirName>
@@ -215,7 +215,7 @@
                 <path>resources</path>
                 <path>storyboard</path>
             </paths>
-        </file>
+        </file> -->
         <!-- === RESOURCES - STORYBOARD === -->
         
         
