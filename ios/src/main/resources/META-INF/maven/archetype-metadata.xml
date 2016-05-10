@@ -58,6 +58,7 @@
 				<include>**/*.strings</include>
 				<include>**/*.nss</include>
 				<include>**/*.json</include>
+				<include>**/*.storyboard</include>
 			</includes>
 			<excludes>
 				<exclude>**/*.png</exclude>
