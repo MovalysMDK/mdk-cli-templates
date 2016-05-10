@@ -205,6 +205,17 @@
                 <path>storyboard</path>
             </paths>
         </file>
+        <file>
+            <fullName>__artifactId__/resources/storyboard/HomeScreen.storyboard</fullName>
+            <shortName>HomeScreen.storyboard</shortName>
+            <dirName>__artifactId__/resources/storyboard</dirName>
+            <injection>false</injection>
+            <paths>
+                <path>__artifactId__</path>
+                <path>resources</path>
+                <path>storyboard</path>
+            </paths>
+        </file>
         <!-- === RESOURCES - STORYBOARD === -->
         
         
@@ -233,5 +244,21 @@
             </paths>
         </file>
         <!-- === RESOURCES - XIB === -->
+
+
+
+        <!-- === RESOURCES - XCASSETS === -->
+        <file>
+            <fullName>__artifactId__/resources/img/Images.xcassets</fullName>
+            <shortName>Images.xcassets</shortName>
+            <dirName>__artifactId__/resources/img</dirName>
+            <injection>false</injection>
+            <paths>
+                <path>__artifactId__</path>
+                <path>resources</path>
+                <path>img</path>
+            </paths>
+        </file>
+        <!-- === RESOURCES - XCASSETS === -->
     </files>
 </report>
