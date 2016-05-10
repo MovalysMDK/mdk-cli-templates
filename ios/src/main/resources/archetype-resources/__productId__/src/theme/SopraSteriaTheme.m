@@ -32,7 +32,20 @@
 }
 
 - (void)applyThemeOnMDKUIButton:(MDKUIButton *)button {
-    [button setBackgroundColor:[UIColor sopraSteriaPrimary]];
+    [button setTitleColor:[UIColor sopraSteriaTextColor] forState:UIControlStateNormal];
+    
+    int height = [UIScreen mainScreen].applicationFrame.size.height;
+    switch (height) {
+        case 460:               // iPhone 4s
+            button.titleLabel.font = [UIFont boldSystemFontOfSize:14.0f];
+            break;
+        case 548:               // iPhone 5 / iPhone 5s / iPhone 5 SE
+            button.titleLabel.font = [UIFont boldSystemFontOfSize:18.0f];
+            break;
+        default:                // Other
+            button.titleLabel.font = [UIFont boldSystemFontOfSize:24.0f];
+            break;
+    }
 }
 
 - (void)applyThemeOnUIButton:(UIButton *)button {
