@@ -1,7 +1,6 @@
-<<<<<<< HEAD
 <!--
 
-    Copyright (C) 2010 Sopra Steria Group (movalys.support@soprasteria.com)
+    Copyright (C) 2016 Sopra Steria Group (movalys.support@soprasteria.com)
 
     This file is part of Movalys MDK.
     Movalys MDK is free software: you can redistribute it and/or modify
@@ -22,14 +21,14 @@
 	<parent>
 		<groupId>com.sopragroup.adeuza.movalysfwk.templates.basic</groupId>
         <artifactId>mdk-basic-template</artifactId>
-        <version>6.7.0-SNAPSHOT</version>
+        <version>6.6.0-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 
-	<artifactId>mdk-uwp-basic-template</artifactId>
+	<artifactId>mdk-basic-project</artifactId>
 	<packaging>jar</packaging>
 
-	<name>MDK Universal Windows App Basic Template</name>
+	<name>MDK Basic Project</name>
 
     <organization>
         <name>Sopra Steria Group</name>
@@ -49,8 +48,8 @@
         <target>1.7</target>
 
         <parentTemplate.groupId>com.sopragroup.adeuza.movalysfwk</parentTemplate.groupId>
-        <parentTemplate.artifactId>mdk-uwp-project-template</parentTemplate.artifactId>
-        <parentTemplate.version>6.7.0-SNAPSHOT</parentTemplate.version>
+        <parentTemplate.artifactId>mdk-project</parentTemplate.artifactId>
+        <parentTemplate.version>6.6.0-SNAPSHOT</parentTemplate.version>
     </properties>
 
     <dependencies>
@@ -74,18 +73,6 @@
 
     
         <plugins>
-			<plugin>
-				<groupId>org.apache.maven.archetype</groupId>
-				<artifactId>maven-archetype</artifactId>
-				<version>2.4</version>
-				<dependencies>
-					<dependency>
-						<groupId>org.apache.maven.shared</groupId>
-						<artifactId>maven-invoker</artifactId>
-						<version>2.2</version>
-					</dependency>
-				</dependencies>
-			</plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
@@ -117,6 +104,23 @@
                         <phase>process-resources</phase>
                         <goals>
                             <goal>resources</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <descriptor>${project.build.directory}/classes/assembly/mdkproject.xml</descriptor>
+                    <finalName>${project.artifactId}-${pom.version}</finalName>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
                         </goals>
                     </execution>
                 </executions>
