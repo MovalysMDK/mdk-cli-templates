@@ -49,7 +49,7 @@
 		
 		<parentTemplate.groupId>com.sopragroup.adeuza.movalysfwk.templates.basic</parentTemplate.groupId>
         <parentTemplate.artifactId>mdk-android-basic-template</parentTemplate.artifactId>
-        <parentTemplate.version>6.6.0-SNAPSHOT</parentTemplate.version>
+        <parentTemplate.version>6.6.0</parentTemplate.version>
     </properties>
 
     <dependencies>
