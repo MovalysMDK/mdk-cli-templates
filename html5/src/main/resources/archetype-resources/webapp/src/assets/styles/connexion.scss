@@ -1,0 +1,28 @@
+$connection-bkg-color: #f9f9f9;
+$connection-margin : 10%;
+$connection-button-width: 80%;
+$connection-button-height: 50px;
+
+.connectionscreen-container {
+    background-color: $connection-bkg-color;
+    background: url(../pictures/splash_centered.png) no-repeat center center;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+
+    .connect-button {
+        color: white;
+        position: absolute;
+        top: 75%;
+        background-color: #93C90E;
+        width: $connection-button-width;
+        height: $connection-button-height;
+        font-size: 20px;
+        text-align: center;
+        vertical-align: middle;
+        line-height: $connection-button-height;
+        font-weight: bold;
+        border: none;
+        margin: 0 $connection-margin 0 $connection-margin;
+    }
+}
