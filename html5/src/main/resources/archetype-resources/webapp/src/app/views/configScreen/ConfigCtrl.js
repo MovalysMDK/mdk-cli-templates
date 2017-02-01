@@ -29,6 +29,7 @@ angular.module('mfui').controller('ConfigCtrl', ['$scope', 'ConfigVMFactory', 'M
         }, function (error) { });
 
         $scope.connect = connect;
+        $scope.skipConnection = skipConnection;
 
         function connect() {
 
@@ -45,6 +46,10 @@ angular.module('mfui').controller('ConfigCtrl', ['$scope', 'ConfigVMFactory', 'M
             function connectionError(error) {
                 console.info('ws login ko', error.message);
             }
+        }
+
+        function skipConnection() {
+            $state.go($scope.viewConfig.screenConfig.exitState);
         }
     }
 ]);

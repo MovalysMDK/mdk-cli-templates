@@ -10,7 +10,7 @@
         .factory('RemoteApiHelper', RemoteApiHelper);
 
     /* @ngInject */
-    function RemoteApiHelper($log, apiParams) {
+    function RemoteApiHelper($log, API_PARAMS) {
 
         // Internal members
         var authenticationUrl = null; // Authentication service url
@@ -91,8 +91,8 @@
 
         // Initialize service
         function initialize() {
-            authenticationUrl = cleanUpBaseUrl(apiParams.AUTH_URL);
-            baseApiUrl = cleanUpBaseUrl(apiParams.BASE_URL);
+            authenticationUrl = cleanUpBaseUrl(API_PARAMS.AUTH_URL);
+            baseApiUrl = cleanUpBaseUrl(API_PARAMS.BASE_URL);
 
             if (baseApiUrl !== undefined && baseApiUrl !== null && !angular.equals('', baseApiUrl)) {
                 $log.info('Base remote server URL: ' + baseApiUrl);

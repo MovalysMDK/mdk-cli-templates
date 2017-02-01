@@ -32,7 +32,7 @@
                 $ctrl.gmapWidth = '100%';
             }
             if (!$ctrl.gmapHeight) {
-                $ctrl.gmapHeight = '200px';
+                $ctrl.gmapHeight = '500px';
             }
 
         };
@@ -43,7 +43,7 @@
                     initMap($ctrl.address);
                 });
             }
-        }
+        };
 
         function initMap(address) {
             if (address) {
@@ -72,11 +72,5 @@
             }
         }
 
-        function getAddress(response) {
-            var domParser = new DOMParser();
-            var html = domParser.parseFromString(response, 'text/html');
-            html = angular.element(html);
-            address = html.find('.localisation').text();
-        }
     }
 })();

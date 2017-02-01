@@ -10,6 +10,15 @@ $connection-button-height: 50px;
     width: 100%;
     height: 100%;
 
+    .skip-button {
+        position: absolute;
+        color: $enedis-blue;
+        bottom: 0px;
+        right: 0px;
+        padding: 20px;
+        font-weight: bold;
+    }
+
     .connect-button {
         color: white;
         position: absolute;
