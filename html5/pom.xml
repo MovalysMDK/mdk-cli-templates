@@ -21,7 +21,7 @@
 	<parent>
         <groupId>com.sopragroup.adeuza.movalysfwk.templates.design</groupId>
         <artifactId>mdk-design-template</artifactId>
-        <version>6.7.0-SNAPSHOT</version>
+        <version>6.6.4</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
